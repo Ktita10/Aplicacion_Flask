@@ -1,0 +1,18 @@
+{% extends "template_base.html" %}
+
+{% block content %}
+<div class="Llegada">
+    <h1>Registrar Llegada de Transporte</h1>
+    <form method="POST" action="/Registrar_Ll">
+        <label for="transporte_id">Transporte:</label>
+        <select id="transporte_id" name="transporte_id" required>
+            {% for transporte in transportes %}
+                <option value="{{ transporte.id }}">Número de Transporte: {{ transporte.numerotransporte }}, Fecha de Salida: {{ transporte.fechahorasalida }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        
+        <input type="submit" value="Registrar Llegada">
+    </form>
+</div>
+{% endblock %}
