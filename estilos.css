@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  
+  /* Estilos para la barra de navegación */
+  nav {
+    max-width: 75%;
+    margin: 0 auto;
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .link a {
+    color: orangered;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  .link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: -4px;
+    left: 0;
+    background-color: orangered;
+    transition: width 0.3s ease;
+  }
+  
+  .link a:hover::after {
+    width: 70%;
+  }
+  
+  .nav-logo img {
+    border-radius: 30px;
+  }
+  
+  /* Estilos para el header */
+  header {
+    width: 75%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .titulo-header h1 {
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  .titulo-header h4 {
+    margin-bottom: 1rem;
+    color: orangered;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .titulo-header p {
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  /*Lista de Sucursales*/
+  .tabla-sucursales, .tabla {
+    margin-top: 2rem;
+    width: 75%;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+
+  .texto-sucursal h1{
+    color: black;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 25%;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .texto-sucursal h2{
+    color: black;
+    margin: 0 auto;
+    margin-top: 3rem;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border: 2px solid orangered;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .numero:hover {
+    background-color: #b8b5b5;
+    color: white;
+    text-decoration: none; 
+}
+  
+  th {
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /*Funcionalidades*/
+  .funcionalidades {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    margin: 4rem auto;
+  }
+  
+  .funcionalidad {
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .funcionalidad:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .funcionalidad a {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: orangered;
+    transition: color 0.3s;
+  }
+  
+  .funcionalidad a:hover {
+    color: #e04e00;
+  }
+  
+  .cuadro {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /*Registro Paquete*/
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+  background-color: orangered;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5rem;
+}
+
+form button:hover {
+    background-color: orange;
+}
+
+/*Mensaje de Exito*/
+.container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+h1 {
+    color: blue;
+    margin-bottom: 1.5rem;
+}
+
+.container .button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.container .button:hover {
+    background-color: orange;
+}
+
+/*Salida Transporte*/
+.Salida {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.Salida h1 {
+  text-align: center;
+  color: #333;
+}
+
+.Salida form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Salida label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.Salida select,
+.Salida input[type="checkbox"] {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.Salida input[type="submit"] {
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.Salida input[type="submit"]:hover {
+  background-color: orange;
+}
+
+/*LLegada del Transporte*/
+.Llegada {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.Llegada h1 {
+  text-align: center;
+  color: #333;
+}
+
+.Llegada form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Llegada label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.Llegada select {
+  margin-bottom: 10px;
+}
+
+.Llegada input[type = "submit"]{
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.Llegada input[type="submit"]:hover {
+  background-color: orange;
+}
