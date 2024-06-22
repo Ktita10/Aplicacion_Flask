@@ -1,0 +1,25 @@
+{% extends "template_base.html" %}
+
+{% block content %}
+<div class="Salida">
+    <h1>Registrar Salida de Transporte</h1>
+    <form method="POST" action="/Registar_S">
+        <label for="sucursal_destino">Sucursal de Destino:</label>
+        <select id="sucursal_destino" name="sucursal_destino" required>
+            {% for sucursal in sucursales %}
+                <option value="{{ sucursal.id }}">{{ sucursal.numero }} - {{ sucursal.provincia }} - {{ sucursal.localidad }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        
+        <label for="paquetes">Selecciona Paquetes:</label>
+        <br>
+        {% for paquete in paquetes %}
+            <input type="checkbox" name="paquetes" value="{{ paquete.id }}"> Número de Envío: {{ paquete.numeroenvio }}, Destinatario: {{ paquete.nomdestinatario }}, Dirección: {{ paquete.dirdestinatario }}<br>
+        {% endfor %}
+        <br>
+        
+        <input type="submit" value="Registrar Transporte">
+    </form>
+</div>
+{% endblock %}
