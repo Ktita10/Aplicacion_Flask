@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img src="{{ url_for('static', filename='images/OIG3.jpeg') }}" alt="OIG3">
+        </div>
+        <ul class="nav-links">
+            <li class="link"><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li class="link"><a href="{{ url_for('despachante') }}">Despachante</a></li>
+            <li class="link"><a href="#">Repartidor</a></li>
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
