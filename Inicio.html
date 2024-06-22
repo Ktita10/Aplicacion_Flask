@@ -1,0 +1,12 @@
+{% extends "template_base.html" %}
+{% block content %}
+<header>
+    <div class="titulo-header">
+        <h1>LogiPack</h1>
+        <h4>Tu Socio Confiable en Logística de Transporte de Paquetes</h4>
+        <p>En LogiPack, nos especializamos en ofrecer soluciones rápidas, 
+            seguras y eficientes para el transporte de tus paquetes. Con nuestro servicio de logística de primer nivel, garantizamos la entrega puntual y segura de tus envíos.</p>
+    </div>
+    <img src="{{ url_for('static', filename='images/imagen-header.jpeg') }}" alt="">
+</header>
+{% endblock %}
