@@ -1,0 +1,31 @@
+{% extends "template_base.html" %}
+
+{% block content %}
+<form method="post" action="/Registrar_P"> 
+    <label for="peso">Peso:</label> 
+    <input type="text" name="peso" id="peso" required> <br> 
+    <label for="nombre">Nombre:</label> 
+    <input type="text" name="nombre" id="nombre" required> <br> 
+    <label for="direccion">Dirección:</label> 
+    <input type="text" name="direccion" id="direccion" required> <br> 
+    <label for="sucursal">Sucursal:</label> 
+    <input type="text" name="sucursal" id="sucursal" required> <br> 
+    <button type="submit">Registrar Paquete</button> </form>
+</form>
+<section class="funcionalidades">
+    <div class="funcionalidad">
+        <a href="{{ url_for('Registrar_S') }}">
+            <div class="cuadro">
+                <h2>Registrar Salida</h2>
+            </div>
+        </a>
+    </div>
+    <div class="funcionalidad">
+        <a href="{{ url_for('Registrar_Ll') }}">
+            <div class="cuadro">
+                <h2>Registrar Salida</h2>
+            </div>
+        </a>
+    </div>
+</section>
+{%endblock%}
